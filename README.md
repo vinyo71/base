@@ -1,5 +1,5 @@
 # Train Speed Controller
-1
+3
 This is a sample application for the verification laboratory.
 
 ## Getting started
