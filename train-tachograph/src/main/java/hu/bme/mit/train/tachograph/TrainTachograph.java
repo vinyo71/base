@@ -9,6 +9,8 @@ import hu.bme.mit.train.controller.TrainControllerImpl;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
 
+import java.time.LocalTime;
+
 public class TrainTachograph {
     private TrainController controller = new TrainControllerImpl();
     private TrainUser user = new TrainUserImpl(controller);
