@@ -13,13 +13,13 @@ import hu.bme.mit.train.interfaces.TrainUser;
 
 
 public class TrainTachograph {
-    private TrainUser user = new TrainUserImpl(controller);
     private TrainController controller = new TrainControllerImpl();
+    private TrainUser user = new TrainUserImpl(controller);
     private Table<String, Integer, Double> tachograph;
 
     public TrainTachograph() {
         tachograph = HashBasedTable.create();
-        table.put(java.time.LocalTime.now(), user.getJoystickPosition(), controller.getReferenceSpeed());
+        tachograph.put(java.time.LocalTime.now(), user.getJoystickPosition(), controller.getReferenceSpeed());
     }
     
     public void put(String time, Integer joyPos, Double refSpeed){
