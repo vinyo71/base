@@ -14,7 +14,6 @@ public class TrainSystemTest {
 	TrainController controller;
 	TrainSensor sensor;
 	TrainUser user;
-	TrainTachograph tachograph;
 	
 	@Before
 	public void before() {
