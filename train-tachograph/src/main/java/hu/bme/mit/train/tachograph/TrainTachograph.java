@@ -14,14 +14,14 @@ import java.time.LocalTime;
 public class TrainTachograph {
     private TrainController controller = new TrainControllerImpl();
     private TrainUser user = new TrainUserImpl(controller);
-    private Table<LocalTime, Integer, Double> tachograph;
+    private Table<LocalTime, int, int> tachograph;
 
     public TrainTachograph() {
         tachograph = HashBasedTable.create();
         tachograph.put(java.time.LocalTime.now(), user.getJoystickPosition(), controller.getReferenceSpeed());
     }
     
-    public void put(String time, Integer joyPos, Double refSpeed){
+    public void put(LocalTime time, int joyPos, int refSpeed){
         tachograph.put(time, joyPos, refSpeed);
     }
 
