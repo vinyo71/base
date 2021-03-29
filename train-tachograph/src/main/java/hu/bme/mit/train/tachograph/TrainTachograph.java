@@ -9,13 +9,10 @@ import hu.bme.mit.train.controller.TrainControllerImpl;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainUser;
 
-
-
-
 public class TrainTachograph {
     private TrainController controller = new TrainControllerImpl();
     private TrainUser user = new TrainUserImpl(controller);
-    private Table<String, Integer, Double> tachograph;
+    private Table<LocalTime, Integer, Double> tachograph;
 
     public TrainTachograph() {
         tachograph = HashBasedTable.create();
