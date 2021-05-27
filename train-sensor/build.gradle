@@ -1,7 +1,8 @@
 dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
     compile project(':train-interfaces')
     compile project(':train-user')
 
     compile group: 'junit', name: 'junit', version: '4.12'
-    compile 'org.mockito:mockito-core:2.7.16'
+    compile group: 'org.mockito', name: 'mockito-core', version: '2.22.0'
 }
